@@ -1,0 +1,21 @@
+{
+  "name": "cutshort",
+  "version": "1.0.0",
+  "description": "This project is to reduce the length of urls to make it easy for sharing across.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url",
+    "shortner"
+  ],
+  "author": "paras.mathur",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.4"
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>URL Shortener</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- THIS IS FOR MODAL -->
+  
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+  <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <!-- <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/marketing.css"> -->
+        <!--<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+    <![endif]-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Dialog/dist/css/flat/zebra_dialog.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Dialog/dist/zebra_dialog.min.js"></script>
+
+</head>
+<body>
+
+<div class="header" hidden>
+	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Shorten It!</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="splash-container">
+	<div class="splash">
+		<form class="pure-form">
+			<fieldset>
+				<input type="text" id="url-field" placeholder="Paste your link here" style="font-size:16pt;" size="60"/>
+				<button type="submit" class="pure-button btn-shorten" style="font-size:22pt;">Submit</button>
+			</fieldset>
+		</form>
+	</div>	
+
+
+	<div id="shortUrl"></div>
+
+	
+
+</div>
+
+<div class="content-wrapper">
+		<blockquote>
+		  <p>That was one of the best Pizzas I have ever eaten in my life. The cheese was so good it made me faint. </p>
+		</blockquote>
+		<cite>Elvis A. Presley</cite>
+	</div>
+
+
+<script src="javascripts/shorten.js"></script>
+<script type="text/javascript">
+  	$(document).ready(function() {
+
+    // show a dialog box when clicking on an element
+    $('#shortUrl').on('click', function(e) {
+        e.preventDefault();
+        new $.Zebra_Dialog('The link was clicked!');
+    });
+
+	});
+
+  	$(".pure-form").submit(function(e){
+    e.preventDefault();
+ 	});
+ 	
+  </script>
+
+</body>
+</html>
